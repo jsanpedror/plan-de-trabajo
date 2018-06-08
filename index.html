@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Plan de trabajo Mediateca</title>
+  <link rel="stylesheet" type="text/css" href="planDeTrabajo.css">
+  <script src="planDeTrabajo.js"></script>
+  </head>
+<body>
+<body onload="printpage()">
+<div id="comenzarDiv" class="mostarDiv">
+<div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+  <h1>Nombre e Idioma meta</h1>
+  <p>Escribe tu nombre</p>
+    <input type="text" id="nombreAp" placeholder="Nombre completo"/><br/>
+    <p>Selecciona el idioma que quieres aprender</p><br/>
+    <input type="radio" class="idiomaMet" id="ingles" value="Inglés"/><label for="ingles">Inglés</label>
+    <input type="radio" class="idiomaMet" id="frances" value="Francés"/><label for="frances">Francés</label><br/>
+<button id="comenzarButton" onclick="datosAp()">Comenzar</button>
+
+
+  </div>
+  <div class="planDeTrabajo" id="parte1">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+    <h1>Mi meta es:</h1>
+    
+    <input type="text" id="miMeta" placeholder="Escribe tu meta"/><br/>
+    <button onclick="myGoal()">Siguiente</button>
+      
+  </div>
+  <div class="planDeTrabajo" id="parte2">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+    <h1>Lo haré en estos meses:</h1>
+    
+    <p>De:
+  <select name="mesInicio" size="1" id="mesInicio">
+<option value="" selected="selected">---</option>
+    <option value="enero" >enero</option>
+    <option value="febrero">febrero</option>
+    <option value="marzo">marzo</option>
+    <option value="abril" >abril</option>
+    <option value="mayo" >mayo</option>
+    <option value="junio" >junio</option>
+    <option value="julio" >julio</option>
+    <option value="agosto" >agosto</option>
+    <option value="septiembre" >septiembre</option>
+    <option value="octubre" >octubre</option>
+    <option value="noviembre" >noviembre</option>
+    <option value="diciembre" >diciembre</option>    
+  </select>
+  a:
+  <select name="mesFin" size="1" id="mesFin">
+    <option value="" selected="selected" >---</option>
+    <option value="enero" >enero</option>
+    <option value="febrero">febrero</option>
+    <option value="marzo">marzo</option>
+    <option value="abril" >abril</option>
+    <option value="mayo" >mayo</option>
+    <option value="junio" >junio</option>
+    <option value="julio" >julio</option>
+    <option value="agosto" >agosto</option>
+    <option value="septiembre" >septiembre</option>
+    <option value="octubre" >octubre</option>
+    <option value="noviembre" >noviembre</option>
+    <option value="diciembre" >diciembre</option>
+  </select>
+</p>
+     <button onclick="neededTime()">Siguiente</button> 
+  </div>
+  <div class="planDeTrabajo" id="parte3">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+    <h1>El horario en el que puedo asistir a la mediateca es:</h1>
+    <label for="horaInicio">de</label>
+  <input type="time" id="horaInicio"/>
+    <label for="horaTermino">a</label>
+    <input type="time" id="horaTermino"><br/>
+  <button onclick="howLong()">Siguiente</button>
+  </div>
+  <div class="planDeTrabajo" id="parte4">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+<h1>¿Necesito ayuda de un asesor?</h1>
+    <input type="radio" name="asesor" id="asesorSi" value="Sí"><label for="asesorSi">Sí</label><br/>
+    <input type="radio" name="asesor"/ id="asesorNo" value="No"><label for="asesorNo">No</label><br/>
+    <button onclick="asesorRequerido()">Siguiente</button>
+  </div>
+  <div class="planDeTrabajo" id="parte5">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+    <h1>La(s) habilidad(es) que necesito desarollar es/son:</h1>
+    <input class="habilidadesCheckbox" type="checkbox" id="hablar" name="habilidades" value="hablar"/><label for="hablar">Hablar</label><br/>
+    <input class="habilidadesCheckbox" type="checkbox" id="escuchar" name="habilidades" value="escuchar"/><label for="escuchar">Escuchar</label><br/>
+   <input class="habilidadesCheckbox" type="checkbox" id="escribir" name="habilidades" value="escribir"/><label for="escribir">Escribir</label><br/>
+    <input class="habilidadesCheckbox" type="checkbox" id="leer" name="habilidades" value="leer"/><label for="leer">Leer</label><br/>
+    <button onclick="misHabilidades()">Siguiente</button>
+  </div>
+  <div class="planDeTrabajo" id="parte6">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+<h1>Para ello debo ejercitarme en estas áreas de la lengua durante _ horas a la semana</h1>
+    <ul>
+<li><label for="cultura">Cultura</label>
+<input class="horasSemana" id="cultura" type="number" name="cultura" value="0" min="0"></li>
+      
+      <li><label for="fonetica">Fónetica</label>
+<input class="horasSemana" id="fonetica" type="number" name="fónetica" value="0" min="0"></li>
+      
+      <li><label for="gramatica">Gramática</label>
+<input class="horasSemana" id="gramatica" type="number" name="gramática" value="0" min="0"></li>
+      
+      <li><label for="expresionOral">Expresión oral</label>
+<input class="horasSemana" id="expresionOral" type="number" name="expresion oral" value="0" min="0"></li>
+      
+      <li><label for="comprensionAuditiva">Comprensión Auditiva</label>
+<input class="horasSemana" id="comprension auditiva" type="number" name="comprension auditiva" value="0" min="0"></li>
+      
+      <li><label for="expresionEscrita">Expresión escrita</label>
+<input class="horasSemana" id="expresion escrita" type="number" name="expresion escrita" value="0" min="0"></li>
+      
+      <li><label for="comprensionLectura">Comprensión de lectura</label>
+<input class="horasSemana" id="comprensión de lectura" type="number" name="comprension de lectura" value="0" min="0"></li>
+      
+      <li><label for="vocabulario">Vocabulario</label>
+<input class="horasSemana" id="vocabulario" type="number" name="vocabulario" value="0" min="0"></li>
+    </ul><br/>
+    <button onclick="horaSemanal()">Siguiente</button>
+  </div>
+  <div class="planDeTrabajo" id="parte7">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+<h1>Trabajaré con estos materiales</h1>
+     <input class="materiales" type="checkbox" id="libros" name="materiales" value="libros"/><label for="libros">Libros</label><br/>
+    
+    <input class="materiales" type="checkbox" id="audios" name="materiales" value="audios"/><label for="audios">Audios</label><br/>
+    
+   <input class="materiales" type="checkbox" id="software" name="materiales" value="software"/><label for="software">Software</label><br/>
+    
+    <input class="materiales" type="checkbox" id="tutorial" name="materiales" value="tutorial"/><label for="tutorial">Tutorial</label><br/>
+    
+    <input class="materiales" type="checkbox" id="fichasAprender" name="materiales" value="fichasAprender"/><label for="fichasAprender">Ficha(s) de aprender a aprender</label><br/>
+    
+<input class="materiales" type="checkbox" id="fichasContenido" name="materiales" value="fichasContenido"/><label for="fichasContenido">Fichas de Contenido</label><br/>
+    
+    <input class="materiales" type="checkbox" id="diccionarios" name="materiales" value="diccionarios"/><label for="diccionarios">Diccionarios</label><br/>
+
+    <input class="materiales" type="checkbox" id="cursos" name="materiales" value="cursos"/><label for="cursos">Cursos generales</label><br/>
+    
+    <input class="materiales" type="checkbox" id="ejercicios" name="materiales" value="ejercicios"/><label for="ejercicios">Ejercicios</label><br/>
+    
+    <button onclick="misMateriales()">Siguiente</button>
+  </div>
+    
+  <div class="planDeTrabajo" id="parte8">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+    <h1>Mis técnicas serán:</h1>
+    <input type="checkbox" class="tecnicasCheckbox" name="memorizar" value="memorizar" id="memorizar"/><label for="memorizar">Memorizar</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="asociarIdeas" value="asociar ideas" id="asociarIdeas"/><label for="asociarIdeas">Asociar ideas</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="repetir" value="repetir frases o plalabras" id="repetir"/><label for="repetir">Repetir frases o palabras</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="inferir" value="inferir de acuerdo con el contexto" id="inferir"/><label for="inferir">Inferir de acuerdo al contexto</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="agrupar" value="agrupar ideas, conceptos o tipos de palabras" id="agrupar"/><label for="agrupar">Agrupar ideas, conceptos o tipos de palabras</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="conversar" value="conversar en el idioma con maestros y compañeros" id="conversar"/><label for="conversar">Conversar en el idioma con maestros y compañeros</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="consultar" value="consultar fuentes de información" id="consultar"/><label for="consultar">Consultar fuentes de información</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="usar" value="usar diccionarios" id="usar"/><label for="usar">Usar diccionarios</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="imagenes" value="usar imagenes mentales" id="imagenes"/><label for="imagenes">Usar imagenes mentales</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="preguntar" value="preguntar" id="preguntar"/><label for="preguntar">Preguntar</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="chatear" value="chatear" id="chatear"/><label for="chatear">Chatear</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="verificar" value="varificar" id="verificar"/><label for="verificar">Verificar</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="verTv" value="Ver TV" id="verTv"/><label for="verTv">Ver TV</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="escuchar" value="escuchar la radio" id="escuchar"/><label for="escuchar">Escuchar la radio</label><br/>
+    
+    <input type="checkbox" class="tecnicasCheckbox" name="tomar" value="tomar notas" id="tomar"/><label for="tomar">Tomar notas</label><br/>
+    <button onclick="misTecnicas()">Siguiente</button>
+  </div>
+  <div class="planDeTrabajo" id="parte9">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+    <h1>Verificaré mi desempeño valiendome de:</h1>
+    <p>La revisión de tu plan de trabajo es una excelente manera de evaluarte, puedes hacerlo relacionado al:</p>
+    <div class="subDiv" id="subDiv1">
+      <h3><input type="radio" name="verDesempeno" id="idioma" value="idioma"><label for="idioma"><u>idioma</u></label></h3>
+	  <p><i>Si eligiste verificar tu desempeño en relación al idioma lo harás por medio de:</i></p>
+      <input type="checkbox" class="verificacion" id="examenes" name="verificar" value="examenes y/o tests"/><label for="examenes">Examenes y/o tests</label><br/>
+      <input type="checkbox" class="verificacion" id="resolviendo" name="verificar" value="resolviendo ejercicios"/><label for="resolviendo">Resolviendo ejercicios</label><br/>
+      <input type="checkbox" class="verificacion" id="entrevista" name="verificar" value="entrevista con asesor"/><label for="entrevista">Entrevista con asesor</label><br/>
+      <input type="checkbox" class="verificacion" id="escuchando" name="verificar" value="escuchando un audio"/><label for="escuchando">Escuchando un audio</label><br/>
+	<input type="checkbox" class="verificacion" id="adquisicion" name="verificar" value="adquisición de vocabulario"/><label for="adquisicion">Adquisición de vocabulario</label><br/>
+      <input type="checkbox" class="verificacion" id="autoevaluacion" name="verificar" value="autoevaluación"/><label for="autoevaluacion">Autoevaluación</label>
+    </div>
+    <div class="subDiv" id="subDiv2">
+      <h3><input type="radio" name="verDesempeno" id="desempeño" value="desempeño"><label for="desempeño"><u>desempeño</u></label></h3>
+      <p><i>El desempeño se refiere al cumplimiento y a la manera en que desarrollaste las acciones y/o actividades que habías planificado</i></p>
+    </div>
+   <div id="subDiv3"><button onclick="verificaDes()">Siguiente</button>
+    </div>
+  </div>
+  
+  <div class="planDeTrabajo" id="resultados">
+  <div class=imageDiv>
+  <img src="imagenes/logo_idiomas.jpg" alt="Logo Idiomas" style="float:left;width:90px;height:90px;">
+  <img src="imagenes/logomediateca3.png" alt="Logo Mediateca" style="float:right;width:90px;height:90px;">
+  </div>
+  <h1>Plan de trabajo</h1>
+  <p id="datosOut"></p>
+<p id="metaAprendiente"></p>
+    <p id="tiempoNecesario"></p>
+    <p id="numeroHoras"></p>
+    <p id= "asesorSiNo"></p>
+    <p id="habilidadesOut"></p>
+    <p id="hrsSemOut"></p>
+    <p id="habilidadesOut"></p>
+    <p id="mateOut"></p>
+    <p id="tecnicasOut"></p>
+	<p id="verificarOut"></p>
+	<button onclick="location.href='https://www2.politicas.unam.mx/idiomas/?page_id=109'">Volver</button><button onclick="window.print()">Imprimir esta página</button>
+  </div>
+</body>
+</html>

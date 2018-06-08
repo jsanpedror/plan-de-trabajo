@@ -1,0 +1,67 @@
+.planDeTrabajo{
+  
+  padding-top: 5px;
+  margin-top: 5px;
+  font-size: 30px;
+  display: none;
+padding-left: 35px;
+
+}
+
+/*.mostrarDiv{
+  border: 1px solid black;
+  padding: 5%;
+  margin-top: 5px;
+  font-size: 20px;
+  visibility: visible;
+}*/
+
+input[type="number"]{
+  width: 45px;
+margin: 10px;
+}
+ul{
+   list-style-position: inside;
+  
+}
+
+button{
+  margin: 10px;
+  font-size: 20px;
+  
+}
+#subDiv1{
+	float: left;
+	width: 30%;
+}
+#subDiv2{
+	float:right;
+	width: 30%;
+}
+#subDiv3 {
+	clear: left;
+	padding-top: 10px;
+	
+}
+.imageDiv {
+	padding-top:15px;
+	padding-bottom: 70 px;
+	clear: both;
+	
+}
+h1 {
+	text-align: center;
+}
+input {
+	font-size: 25px;
+}
+p {
+	font-size: 25px;
+}
+#comenzarDiv {
+padding-top: 5px;
+  margin-top: 5px;
+  font-size: 30px;
+ 
+padding-left: 35px;	
+}
